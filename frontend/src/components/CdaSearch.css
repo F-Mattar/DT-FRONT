@@ -1,0 +1,76 @@
+/* src/components/CdaSearch.css */
+
+.cda-search-container {
+  margin: 0 2rem 2rem 2rem;
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filters-container .MuiFormControl-root {
+  min-width: 220px;
+}
+
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-container thead th {
+  background-color: var(--chart-bar-color);
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-container tbody td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #eee; 
+}
+
+.table-container tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table-container tbody tr:hover {
+  background-color: #e9ecef;
+}
+
+.loading-text, .error-text {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+}
+
+.status-cell {
+  display: flex;
+  align-items: center;
+}
+
+.status-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}

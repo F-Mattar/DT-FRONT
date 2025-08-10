@@ -1,0 +1,152 @@
+:root {
+  --pgm-dark-blue: #002147;
+  --chart-bar-color: #00aeff;
+  --background-color: #f4f7fa;
+  --text-color: #333;
+  --card-background: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app-layout {
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  background-color: #e9ecef;
+  padding: 1.5rem;
+  border-right: 1px solid #dee2e6;
+  transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.sidebar.closed {
+  width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  color: var(--pgm-dark-blue);
+}
+
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.chart-card {
+  background-color: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.chart-card h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.chart-selector-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.chart-selector-button:hover {
+  background-color: #e9ecef;
+}
+
+.chart-selector-button.selected {
+  background-color: var(--pgm-dark-blue);
+  color: white;
+  border-color: var(--pgm-dark-blue);
+}
+
+.recharts-legend-item-text {
+  color: var(--text-color) !important;
+}
+
+.search-widget {
+  grid-column: 1 / -1;
+  padding: 0 2rem 2rem 2rem;
+}
+
+/* --- ESTILOS ADICIONADOS --- */
+.master-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 1.5rem 2rem;
+  background-color: var(--card-background);
+  margin: 0 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.cda-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.search-button, .reset-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.search-button {
+  background-color: var(--pgm-dark-blue);
+}
+
+.reset-button {
+  background-color: #6c757d;
+}
+
+.error-message {
+  text-align: center;
+  color: #dc3545;
+  margin-top: 1rem;
+}
+
+.search-container {
+  padding: 0 2rem 2rem 2rem;
+}
