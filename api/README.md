@@ -54,7 +54,7 @@ Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local. O
 * [Node.js](https://nodejs.org/en/) (versão 18 ou superior)
 * [Python](https://www.python.org/) (versão 3.9 ou superior) e `pip`
 
-### 1. Clonar o Repositório
+### 1. Clonar o Repositório e Acessar a Pasta
 ```bash
 # Clone este repositório
 git clone [https://github.com/F-Mattar/DT-FRONT](https://github.com/F-Mattar/DT-FRONT)
@@ -62,41 +62,48 @@ git clone [https://github.com/F-Mattar/DT-FRONT](https://github.com/F-Mattar/DT-
 # Acesse a pasta do projeto
 cd DT-FRONT
 
-# Rodando o Backend (API)
+### 2. Rodando o Backend (API)
 
-## 1. Acesse a pasta da API
-$ cd api
+Em um terminal, execute os seguintes passos:
 
-## 2. Crie e ative um ambiente virtual (recomendado)
-$python -m venv venv$ source venv/bin/activate  # No Windows: venv\Scripts\activate
+# 1. Acesse a pasta da API
+cd api
 
-## 3. Instale as dependências Python a partir da raiz do projeto
-$ pip install -r ../requirements.txt
+# 2. Crie e ative um ambiente virtual (recomendado)
+python -m venv venv
+source venv/bin/activate  # No Windows: venv\Scripts\activate
 
-## 4. Inicie o servidor da API na porta 8000
-$ uvicorn main:app --reload --port 8000 # O servidor em execução em http://127.0.0.1:8000
+# 3. Instale as dependências Python
+pip install -r ../requirements.txt
 
-# Rodando o Frontend
+# 4. Inicie o servidor da API
+uvicorn main:app --reload --port 8000
 
-## Em outro terminal, Em outro terminal, execute os seguintes passos a partir da raiz do projeto (DT-FRONT):
+O servidor da API estará em execução em http://127.0.0.1:8000.
 
+### 3. Rodando o Frontend
+
+Em outro terminal, execute os seguintes passos:
+
+```bash
 # 1. Acesse a pasta do frontend
-$ cd frontend
+cd frontend
 
 # 2. Instale as dependências do Node.js
-$ npm install
+npm install
 
 # 3. Inicie o servidor de desenvolvimento
-$ npm run dev
+npm run dev
+```
 
-# A aplicação frontend estará acessível em http://localhost:5173 
+A aplicação frontend estará acessível em http://localhost:5173.
 
-# API Endpoints
+### 4. API Endpoints
 
-## A API FastAPI expõe os seguintes endpoints principais:
+A API FastAPI expõe os seguintes endpoints principais:
 
-GET /resumo/{file_name}: Retorna o conteúdo de um arquivo JSON da pasta /data (ex: saldo_cdas). 
+GET /resumo/{file_name}: Retorna o conteúdo de um arquivo JSON da pasta /data (ex: saldo_cdas).
 
-GET /cda/search: Permite a busca e filtragem de CDAs com base em parâmetros de query como ano, situacao, saldo_min, etc. 
+GET /cda/search: Permite a busca e filtragem de CDAs com base em parâmetros de query como ano, situação, saldo_min, etc.
 
-GET /cda/{cda_number}/dashboard: Retorna os dados agregados para a construção do painel de uma única CDA. 
+GET /cda/{cda_number}/dashboard: Retorna os dados agregados para a construção do painel de uma única CDA.
