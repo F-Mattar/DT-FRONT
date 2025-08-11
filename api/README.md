@@ -58,7 +58,7 @@ Siga os passos abaixo para configurar e rodar o projeto em seu ambiente local. O
 ```bash
 # Clone este repositório
 git clone [https://github.com/F-Mattar/DT-FRONT](https://github.com/F-Mattar/DT-FRONT)
-
+```
 # Acesse a pasta do projeto
 cd DT-FRONT
 
